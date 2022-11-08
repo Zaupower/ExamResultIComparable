@@ -15,8 +15,9 @@ internal class Program
         ExamResult examResult2 = new ExamResult(1, "Antonio", Exams.PHYSICS, Score.B, date2);
         ExamResult examResult3 = new ExamResult(3, "Soares", Exams.ENGLISH, Score.A, date3);
         ExamResult examResult4 = new ExamResult(2, "Marcelo", Exams.ENGLISH, Score.A, date1);
+        ExamResult examResult5 = new ExamResult(1, "Marcelo", Exams.ENGLISH, Score.A, date1);
 
-        var examResults = new[] { examResult1,examResult2,examResult3,examResult4};
+        var examResults = new[] { examResult1,examResult2,examResult3,examResult4, examResult5};
 
         var sorted = examResults.OrderBy(i => i);
 
