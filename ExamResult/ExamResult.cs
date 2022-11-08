@@ -8,15 +8,34 @@ namespace ExamResult
 {
     public class ExamResult : IComparable<ExamResult>
     {
-        int ID;
-        string Name;
-        Exams exam;
-        Score score;
-        DateTime date;
+        public int ID;
+        public string Name;
+        public Exams Exam;
+        public Score Score;
+        public DateTime Date;
 
+        public ExamResult(int ID, string Name, Exams Exam, Score Score, DateTime Date)
+        {
+            this.ID = ID;
+            this.Name = Name;
+            this.Exam = Exam;
+            this.Score = Score;
+            this.Date = Date;
+        }
         public int CompareTo(ExamResult other)
         {
-            throw new NotImplementedException();
+            int resName = this.Name.CompareTo(other.Name);
+            if(resName == 0)
+            {
+                int resDate = this.Date.CompareTo(other.Date);
+                if (resDate == 0)
+                {
+                    int resID = this.ID.CompareTo(other.ID);
+                    return resID;
+                }
+                return resDate;
+            }
+            return resName;
         }
     }
 }
