@@ -1,5 +1,5 @@
 ﻿
-namespace ExamResult;
+namespace ExamResultApp;
 internal class Program
 {
     private static void Main(string[] args)

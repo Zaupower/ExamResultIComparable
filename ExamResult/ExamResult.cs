@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ExamResult
+﻿namespace ExamResultApp
 {
     public class ExamResult : IComparable<ExamResult>
     {
@@ -36,6 +30,11 @@ namespace ExamResult
                 return resDate;
             }
             return resName;
+        }
+
+        public override string ToString()
+        {
+            return "Name: "+ this.Name + ", Date: " + Date + ", ID: " + ID;
         }
     }
 }
